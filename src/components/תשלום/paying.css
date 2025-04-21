@@ -1,0 +1,19 @@
+.inputsPaying {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    border: 1px solid black;
+    padding-left: 140px;
+    margin-left: 35%;
+    margin-top: 16vh;
+      padding-top: 50px;
+      padding-bottom: 50px;
+} 
+.inputs{
+   height:40px ; 
+   width: 300px;
+   font-size: 20px;
+   margin-top: 30px;
+ 
+}
