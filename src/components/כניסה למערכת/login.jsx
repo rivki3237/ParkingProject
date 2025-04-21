@@ -28,7 +28,7 @@ export const Login = () => {
     },[isNew])
 
     return <div className='loginInputs'>
-    <h1>hello</h1>
+    <h1>hello cbn </h1>
    <Box
     sx={{ '& .MuiTextField-root': { m: 2, width: '25ch' } }}>
 
