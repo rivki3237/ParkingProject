@@ -25,9 +25,8 @@ export const DriverSlice = createSlice({
 
         },
         insertLicensePlate: (state, action) => {
+            debugger
             state.licensePlate = action.payload;
-
-
         },
         insertCode: (state, action) => {
             state.code = action.payload;
