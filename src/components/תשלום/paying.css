@@ -17,3 +17,19 @@
    margin-top: 30px;
  
 }
+.chooseCC:hover,u{
+cursor:pointer ;
+}
+.chooseCC{
+   border: 1px solid black;
+   display: flex;
+   direction: rtl;
+   width: 20vw;
+   font-size: larger;
+   height: 80px;
+   align-items: center;
+}
+.ccDetails{
+   text-align: center;
+   direction: ltr;
+}

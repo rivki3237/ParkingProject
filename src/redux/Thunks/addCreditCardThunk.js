@@ -6,13 +6,14 @@ export const addCreditCardThunk = createAsyncThunk(
     'addCreditCardThunk',
     // פונקציה להפעלה 
 
-    async ( creditCard ) => {
-console.log(creditCard,"creditCard");
-        const card= {
-            creditCardNum:creditCard.creditCardNum,
-            validityCard:creditCard.validityCard,
-            cvv:creditCard.cvv,
-            id:creditCard.id,
+    async (creditCard) => {
+        debugger
+        console.log(creditCard, "creditCard");
+        const card = {
+            creditCardNum: creditCard.creditCardNum,
+            validityCard: creditCard.validityCard,
+            cvv: creditCard.cvv,
+            id: creditCard.id,
         }
         const response = await fetch(`https://localhost:7164/api/CreditCards/addCreditCard`, {
             method: 'POST',
@@ -23,7 +24,7 @@ console.log(creditCard,"creditCard");
         });
 
         if (response.ok) {
-          const data = await response.json();
+            const data = await response.json();
             return data;
         }
         else {

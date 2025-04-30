@@ -6,14 +6,35 @@ export const paymentThunk = createAsyncThunk(
     'paymentThunk',
     // פונקציה להפעלה 
    
-    async (blPayment , blCreditCards  , lisencePlate , numOfPayments) => {
-        const shiluv = {
-            blPayment:blPayment,
-            blCreditCards:blCreditCards
+    async ({blPayment , blCreditCards , licensePlate , numOfPayments}) => {
+      
+ 
+        // const shalvush = {
+        //     blPayment:blPayment,
+        //     blCreditCards:blCreditCards
+        // }
+        const shalvush = {
+           
+                blPayment: {
+                  creditCardCode: blPayment.creditCardCode,
+                  sum: blPayment.sum,
+                  date: "2025-04-27T12:41:57.724Z"
+                },
+                blCreditCards: {
+                  code: 0,
+                  creditCardNum: blCreditCards.creditCardNum,
+                  validityCard: "2025-04-27T12:41:57.724Z",
+                  id: blCreditCards.id,
+                  cvv: blCreditCards.cvv,
+                  driverCode:blCreditCards.driverCode
+                  
+                }
+            
         }
-        const response = await fetch(`https://localhost:7164/api/Payment/AddPayment/${lisencePlate}/${numOfPayments}`, {
+
+            const response = await fetch(`https://localhost:7164/api/Payment/AddPayment/${licensePlate}/${numOfPayments}`, {
             method: 'POST',
-            body: JSON.stringify(shiluv),
+            body: JSON.stringify(shalvush),
             headers: {
                 'Content-Type': 'application/json'
             }
