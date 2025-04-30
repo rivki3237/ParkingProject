@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit"
 import { loginThunk } from "../Thunks/loginThunk";
 import { addDriverThunk } from "../Thunks/addDriverThunk";
 import { InsertLink } from "@mui/icons-material";
+import { paymentThunk } from "../Thunks/paymentThunk";
 
 
 const INITIAL_STATE_DRIVER = {
@@ -17,7 +18,7 @@ export const DriverSlice = createSlice({
     reducers: {
         insertUserName: (state, action) => {
             state.userName = action.payload;
-
+           
         },
         insertPassword: (state, action) => {
             state.password = action.payload;
@@ -25,8 +26,9 @@ export const DriverSlice = createSlice({
 
         },
         insertLicensePlate: (state, action) => {
-            debugger
             state.licensePlate = action.payload;
+
+
         },
         insertCode: (state, action) => {
             state.code = action.payload;

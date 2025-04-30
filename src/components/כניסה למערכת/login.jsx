@@ -4,10 +4,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import './login.css';
 import { Box, Button, FormControl, FormControlLabel, FormGroup, Input } from "@mui/material";
-import { BorderColor, BorderColorOutlined } from "@mui/icons-material";
+import { BorderColor, BorderColorOutlined, Height } from "@mui/icons-material";
 import { insertLicensePlate, insertPassword, insertUserName } from "../../redux/slices/driverSlice";
 import TextField from '@mui/material/TextField';
-
+import picLogo from '../../icon.png';
 export const Login = () => {
 
     const dispatch = useDispatch()
@@ -39,6 +39,8 @@ export const Login = () => {
         <Button color="inherit" variant="outlined" size="large" sx={{width:"250px", fontFamily:"fantasy", margin:' 0vw 0px 0px 1.5vw'}}  onClick={()=> navigate(`/logon`)}>משתמש חדש</Button><br />
         {exists && navigate(`/login/confirm`)}
     </Box>
+    <div ><img src={picLogo} style={{width:'150px',height:'100px'}}/></div>
+
    </div>
 }
 // export const Login = () => {

@@ -13,6 +13,7 @@ export const findDriverCarThunk = createAsyncThunk(
         console.log(response);
         if (response.ok) {
             console.log("came to thunk");
+
             const data = await response.json();
             console.log(data);
             return data;
